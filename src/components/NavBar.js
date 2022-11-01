@@ -1,9 +1,14 @@
-import React from "react";
+import React from 'react'
+
+let todoCounter = 1
 
 function NavBar() {
-  const links = ["home", "about", "projects"];
+  const links = ['home', 'about', 'projects']
+  // console.log(linkList)
 
-  return <nav>{/* display an <a> tag for each link here */}</nav>;
+  const linkList = links.map((linkItem) => <a key={todoCounter += 1} href={`#` + linkItem}>{linkItem}</a>)
+
+  return <nav>{linkList}</nav>
 }
 
-export default NavBar;
+export default NavBar
